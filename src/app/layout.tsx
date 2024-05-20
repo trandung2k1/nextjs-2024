@@ -3,6 +3,7 @@ import './globals.css';
 import { Inter as FontSans, Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 const fontSans = FontSans({
     subsets: ['latin'],
@@ -38,6 +39,18 @@ export default function RootLayout({
                 // className={`${myFont.className}`}
                 className={`${myFont.variable}`}
             >
+                <ul>
+                    <li>
+                        <Link href="/blog">Blog Page</Link>
+                    </li>
+                    <li>
+                        <Link href="/login">Login Page</Link>
+                    </li>
+                    <li>
+                        <Link href="/register">Register Page</Link>
+                    </li>
+                </ul>
+                
                 {children}
             </body>
         </html>
